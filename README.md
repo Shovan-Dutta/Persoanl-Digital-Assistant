@@ -1,6 +1,7 @@
 # First-Upoad-Persoanl-Voice-Assistant-
 This is just a student project. Trying to mimic google assistant, alexa etc
 This works best with windows 10.
+An internet connection is always required.
 
 Need to seperately install these modules:-
 1. pip install pyttsx3
@@ -12,3 +13,4 @@ Need to seperately install these modules:-
 7. pip install scipy
 8. pip install windowsapps
 9. pip install screen-brightness-control
+10. pip install PyAudio
