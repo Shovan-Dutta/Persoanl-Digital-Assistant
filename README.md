@@ -2,6 +2,7 @@
 This is just a student project. Trying to mimic google assistant, alexa etc
 This works best with windows 10.
 An internet connection is always required.
+Run the main.py file and keep the rest of the files in the same folder.
 
 Need to seperately install these modules:-
 1. pip install pyttsx3
