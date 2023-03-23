@@ -1,4 +1,4 @@
-# First-Upoad-Persoanl-Voice-Assistant-
+# Persoanl Digital Voice Assistant 
 This is just a student project. Trying to mimic google assistant, alexa etc
 This works best with windows 10.
 An internet connection is always required.
