@@ -100,8 +100,7 @@ def intro():
         window.update()
         speak("Good Evening!")  
 
-    speak("Hello there, let me first introduce my creators! First there is SOUGATA PATRA, then there is Ritushree Dey, Shuvranshu Som, Rohita Kundu and last but not the least Shovan Dutta! ")
-    speak("And I am your personal digital assistant. My job is to automate your small tasks with the help of voice commands. It would be my pleasure to do so. You can tell me what to do just by clicking the green play button.")
+    speak("I am your personal digital assistant. My job is to help you with small tasks with the help of voice commands. It would be my pleasure to do so. You can tell me what to do just by clicking the green play button.")
 
 
 # 4 to wish every time it starts
@@ -184,7 +183,7 @@ def play():
 # 8 Activate and deactivate light mode
         elif "light mode" in query or "dark mode" in query:
             s=switch()
-            var.set(s)#IT US SHOWING IN TKINTER
+            var.set(s)#IT IS SHOWING IN TKINTER
             window.update()
             speak(s)
 
@@ -192,65 +191,65 @@ def play():
         elif "brightness" in query:
             if "increase" in query:
                 v = brightness.increase()
-                var.set(v)#IT US SHOWING IN TKINTER
+                var.set(v)#IT IS SHOWING IN TKINTER
                 window.update()
                 speak(v)
             else:
                 v = brightness.decrease()
-                var.set(v)#IT US SHOWING IN TKINTER
+                var.set(v)#IT IS SHOWING IN TKINTER
                 window.update()
                 speak(v)
 
 # 10 just opens youtube, whatsapp, e-carts, social media, google webpages (online feature)
         elif 'open youtube' in query:
-            var.set('opening Youtube')#IT US SHOWING IN TKINTER
+            var.set('opening Youtube')#IT IS SHOWING IN TKINTER
             window.update()
             speak('opening Youtube')
             web_news.youtube()
         elif 'open whatsapp' in query:
-            var.set('opening WhatsApp')#IT US SHOWING IN TKINTER
+            var.set('opening WhatsApp')#IT IS SHOWING IN TKINTER
             window.update()
             speak("opening WhatsApp")
             web_news.whatsapp()
         elif 'open google' in query:
-            var.set('opening Google')#IT US SHOWING IN TKINTER
+            var.set('opening Google')#IT IS SHOWING IN TKINTER
             window.update()
             speak("Opening Google")
             web_news.google()
         elif 'open gmail' in query:
-            var.set('opening gmail')#IT US SHOWING IN TKINTER
+            var.set('opening gmail')#IT IS SHOWING IN TKINTER
             window.update()
             speak("opening Gmail")
             web_news.gmail()
         elif 'open wikipedia' in query:
-            var.set('opening Wikipedia')#IT US SHOWING IN TKINTER
+            var.set('opening Wikipedia')#IT IS SHOWING IN TKINTER
             window.update()
             speak("Opening Wikipedia")
             web_news.wikipedia()
         elif 'open amazon' in query:
-            var.set('opening Amazon')#IT US SHOWING IN TKINTER
+            var.set('opening Amazon')#IT IS SHOWING IN TKINTER
             window.update()
             speak('opening Amazon')
             web_news.amazon()
         elif 'open flipkart' in query:
-            var.set('opening Flipkart')#IT US SHOWING IN TKINTER
+            var.set('opening Flipkart')#IT IS SHOWING IN TKINTER
             window.update()
             speak('Opening Flipkart' )
             web_news.amazon()
         elif 'open facebook' in query:
-            var.set('opening Facebook')#IT US SHOWING IN TKINTER
+            var.set('opening Facebook')#IT IS SHOWING IN TKINTER
             window.update()
             speak('Opening Facebook')
             web_news.facebook()
         elif 'open instagram' in query:
-            var.set('opening Instagram')#IT US SHOWING IN TKINTER
+            var.set('opening Instagram')#IT IS SHOWING IN TKINTER
             window.update()
             speak('opening Instagram')
             web_news.instagram()
 
 # 11 fetches news.(supported languages for news English, Hindi, Bengali) (online feature)
         elif 'news' in query:
-            var.set('I just pulled this live stream and some articles. \nHere you go!')#IT US SHOWING IN TKINTER
+            var.set('I just pulled this live stream and some articles. \nHere you go!')#IT IS SHOWING IN TKINTER
             window.update()
             speak("I just pulled this live stream and some articles. Here you go!")
             if "english" in query:
@@ -269,7 +268,7 @@ def play():
                 d2 = dt.dat()
                 w = weather_location.weather()
                 strTime = dt.tim()
-                var.set("Today is" + d1 + d2 +", the time is" + strTime + ", \nand it is " + str(w[0]) + "degrees outside")#IT US SHOWING IN TKINTER
+                var.set("Today is" + d1 + d2 +", the time is" + strTime + ", \nand it is " + str(w[0]) + "degrees outside")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("Today is" + d1 + d2 +", the time is" + strTime + ", and it is " + str(w[0]) + "degrees outside" )
             except Exception:
@@ -278,7 +277,7 @@ def play():
 # 13 tells my current location ('city', 'state', 'country') (online feature)
         elif 'current location' in query or 'present location' in query or 'where am i' in query:
             w = weather_location.locate()
-            var.set("we are currently at " + str(w[0])+' in the state ' +str(w[1])+ ' in the country' + str(w[2]))#IT US SHOWING IN TKINTER
+            var.set("we are currently at " + str(w[0])+' in the state ' +str(w[1])+ ' in the country' + str(w[2]))#IT IS SHOWING IN TKINTER
             window.update()
             speak("we are currently at " + str(w[0])+' in the state ' +str(w[1])+ ' in the country' + str(w[2]) )
 
@@ -286,22 +285,22 @@ def play():
         elif 'battery information' in query or 'battery status' in query or 'battery' in query:
             s = system.battery_info()
             if bool(s[1]) == True :
-                var.set("The battery is at " + str(s[0]) + " percent and \nis currently plugged in.")#IT US SHOWING IN TKINTER
+                var.set("The battery is at " + str(s[0]) + " percent and \nis currently plugged in.")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("The battery is at " + str(s[0]) + " percent and is currently plugged in.")
             else:
-                var.set("The battery is at " + str(s[0]) + "percent and \nis not currently plugged in.")#IT US SHOWING IN TKINTER
+                var.set("The battery is at " + str(s[0]) + "percent and \nis not currently plugged in.")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("The battery is at " + str(s[0]) + "percent and is not currently plugged in.")
 
 # 15 takes screenshot(offline feature)
         elif 'screenshot' in query:
             if dictation.screenshot() != 0:
-                var.set('screenshot has been successfully taken and \nsaved in the public pictures folder in the c drive')#IT US SHOWING IN TKINTER
+                var.set('screenshot has been successfully taken and \nsaved in the public pictures folder in the c drive')#IT IS SHOWING IN TKINTER
                 window.update()
                 speak('screenshot has been successfully taken and saved in the public pictures folder in the c drive')
             else:
-                var.set("something went wrong please try again")#IT US SHOWING IN TKINTER
+                var.set("something went wrong please try again")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("something went wrong please try again")
 
@@ -309,11 +308,11 @@ def play():
         elif 'weather report' in query or 'weather' in query:
             try:
                 w = weather_location.weather()
-                var.set('the current temperature is ' + str(w[0])+' degrees, \nbut feels like '+ str(w[2]) +' degrees, '+ 'and the currnet humidity is' + str(w[1]))#IT US SHOWING IN TKINTER
+                var.set('the current temperature is ' + str(w[0])+' degrees, \nbut feels like '+ str(w[2]) +' degrees, '+ 'and the currnet humidity is' + str(w[1]))#IT IS SHOWING IN TKINTER
                 window.update()
                 speak ('the current temperature is ' + str(w[0])+' degree, but feels like '+ str(w[2]) +' degrees, '+ 'and the currnet humidity is' + str(w[1]))
             except Exception:
-                var.set('something went wrong please try again later')#IT US SHOWING IN TKINTER
+                var.set('something went wrong please try again later')#IT IS SHOWING IN TKINTER
                 window.update()
                 speak('something went wrong please try again later')
 
@@ -325,56 +324,56 @@ def play():
             if "minute" in d or "minutes" in d:
                 result = d.find('minute' or 'minutes')
                 d =d.replace(d[result:], "")
-            if dictation.countdown(d) != 0:
+            if dictation.countdown(int(d)) != 0:
                 speak(" Time Up! Time up! Time up!")
 
 # 18 tells about the current cpu and ram usage(offline feature)
         elif 'system information' in query:
             s =system.current_sys()
             v = str(brightness.current())
-            var.set('The current cpu usage is around ' + str(s[0])+ 'percent, ram at ' + str(s[1])+ " percent \nwith "+ v+" percent screen brightness")#IT US SHOWING IN TKINTER
+            var.set('The current cpu usage is around ' + str(s[0])+ 'percent, ram at ' + str(s[1])+ " percent \nwith "+ v+" percent screen brightness")#IT IS SHOWING IN TKINTER
             window.update()
             speak('The current cpu usage is around ' + str(s[0])+ 'percent, ram at ' + str(s[1])+ " percent with "+ v+" percent screen brightness")
 
 # 19 carries out normal conversations (offline feature)
         elif 'thank you' in query:
-            var.set("I am pleased, that i could help you")#IT US SHOWING IN TKINTER
+            var.set("I am pleased, that i could help you")#IT IS SHOWING IN TKINTER
             window.update()
             speak("I am pleased, that i could help you")
         elif 'how are you' in query:
-            var.set("I am fine, Thank you")#IT US SHOWING IN TKINTER
+            var.set("I am fine, Thank you")#IT IS SHOWING IN TKINTER
             window.update()
             speak("I am fine, Thank you")
         elif 'am lonely' in query:
-            var.set("I am always here for you")#IT US SHOWING IN TKINTER
+            var.set("I am always here for you")#IT IS SHOWING IN TKINTER
             window.update()
             speak("I am always here for you")
         elif 'what are you' in query or 'who are you' in query:
-            var.set("I am few lines of python code")#IT US SHOWING IN TKINTER
+            var.set("I am few lines of python code")#IT IS SHOWING IN TKINTER
             window.update()
             speak("I am few lines of python code")
         elif 'help me' in query:
-            var.set("Just let me know what to do !")#IT US SHOWING IN TKINTER
+            var.set("Just let me know what to do !")#IT IS SHOWING IN TKINTER
             window.update()
             speak("Just let me know what to do !")
         elif 'what can you do' in query:
-            var.set('i can do many things just try me')#IT US SHOWING IN TKINTER
+            var.set('i can do many things just try me')#IT IS SHOWING IN TKINTER
             window.update()
             speak('i can do many things just try me')
         elif "made you" in query or "created you" in query: 
-            var.set("I have been created by you guys.")#IT US SHOWING IN TKINTER
+            var.set("I have been created by you guys.")#IT IS SHOWING IN TKINTER
             window.update()
             speak("I have been created by you guys.") 
         elif "who i am" in query:
-            var.set("If you talk then definately your human.")#IT US SHOWING IN TKINTER
+            var.set("If you talk then definately your human.")#IT IS SHOWING IN TKINTER
             window.update()
             speak("If you talk then definately your human.")
         elif "why you came to world" in query:
-            var.set("You guys made me, so you know better")#IT US SHOWING IN TKINTER
+            var.set("You guys made me, so you know better")#IT IS SHOWING IN TKINTER
             window.update()
             speak("You guys made me, so you know better")
         elif "What is the meaning of life ?" in query:
-            var.set("42")#IT US SHOWING IN TKINTER
+            var.set("42")#IT IS SHOWING IN TKINTER
             window.update()
             speak("42")#1st easter egg
 
@@ -383,34 +382,35 @@ def play():
         elif "meaning" in query or "meanings" in query:
             m = dictation.meaning(query)
             if m != 0:
-                var.set("the meanings are")#IT US SHOWING IN TKINTER
+                var.set("the meanings are")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("the meanings are")
-                speak(m)
+                for mean in m:
+                    speak(mean)
             else:
-                var.set("something went wrong please try again")#IT US SHOWING IN TKINTER
+                var.set("something went wrong please try again")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("something went wrong please try again")
         elif "synonym" in query or "synonyms" in query:
             m = dictation.syno(query)
             if m != 0:
-                var.set("the synonyms are")#IT US SHOWING IN TKINTER
+                var.set("the synonyms are")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("the synonyms are")
                 speak(m)
             else:
-                var.set("something went wrong please try again")#IT US SHOWING IN TKINTER
+                var.set("something went wrong please try again")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("something went wrong please try again")
         elif "antonym" in query or "antonyms" in query:
             m = dictation.anto(query)
             if m != 0:
-                var.set("the antonyms are")#IT US SHOWING IN TKINTER
+                var.set("the antonyms are")#ITISSHOWING IN TKINTER
                 window.update()
                 speak("the antonyms are")
                 speak(m)
             else:
-                var.set("something went wrong please try again")#IT US SHOWING IN TKINTER
+                var.set("something went wrong please try again")#IT IS SHOWING IN TKINTER
                 window.update()
                 speak("something went wrong please try again")
 
@@ -507,12 +507,12 @@ def play():
                 speak('I could not take down the note due to some error!')
 
 # 26 shutdown, restart,logout the computer and cancel the shutdown of the computer (offline feature)
-        elif 'cancel shutdown' in query:
+        elif 'cancel shutdown' in query or 'cancel shut down' in query:
             search.cancelsd()
             var.set("shutdown procedure has been terminated!")
             window.update()
             speak("shutdown procedure has been terminated!")
-        elif 'shutdown' in query:
+        elif 'shutdown' in query or "shut down" in query:
             search.sd()
             var.set('shutdown will initiate in exactly 60 seconds')
             window.update()
@@ -536,7 +536,7 @@ def play():
             if "minute" in d or "minutes" in d:
                 result = d.find('minute' or 'minutes')
                 d =d.replace(d[result:], "")
-            if dictation.voicerecord(d) != 0:
+            if dictation.voicerecord(int(d)) != 0:
                 var.set('the voice recording has been saved in the public music folder \nin the c drive in your computer')
                 window.update()
                 speak ('the voice recording has been saved in the public music folder in the c drive in your computer')
@@ -566,7 +566,7 @@ def play():
             if "minute" in d or "minutes" in d:
                 result = d.find('minute' or 'minutes')
                 d =d.replace(d[result:], "")
-            if dictation.sleep(d) != 0:
+            if dictation.sleep(int(d)) != 0:
                 var.set('Sleep mode was Successful!')
                 window.update()
                 speak('Sleep mode was Successful!')
