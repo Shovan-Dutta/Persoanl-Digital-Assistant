@@ -15,3 +15,4 @@ Need to seperately install these modules:-
 8. pip install windowsapps
 9. pip install screen-brightness-control
 10. pip install PyAudio
+11. pip install PyDictionary
