@@ -87,7 +87,7 @@ def wikiopen(query):
 
 # for shutdown and cancel shutdown
 def cancelsd():
-    pywhatkit.cancelShutdown()
+    pywhatkit.cancel_shutdown()
     return
 def sd():
     pywhatkit.shutdown(time=60)
