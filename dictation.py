@@ -1,7 +1,7 @@
 import dt
 import os
 from PyDictionary import PyDictionary
-from word2number import w2n
+#from word2number import w2n
 import sounddevice
 from scipy.io.wavfile import write  
 import numpy as np 
@@ -48,6 +48,7 @@ def meaning(query):
             return(m[state])
     except Exception:
         return(0) 
+    
 
 # function to find synonym of a given word
 def syno(query):
@@ -91,8 +92,8 @@ def voicerecord(d):
         d1 = dt.tellday()
         d2 = dt.dat()
         t  = str(rando_name())
-        duration = w2n.word_to_num(d) # Recording duration 
-        recording = sounddevice.rec(int(60*duration * freq), samplerate=freq, channels=2) # Start recorder with the given values of duration and sample frequency 
+        #duration = w2n.word_to_num(d) # Recording duration 
+        recording = sounddevice.rec(int(60* d * freq), samplerate=freq, channels=2) # Start recorder with the given values of duration and sample frequency 
         sounddevice.wait()# Record audio for the given number of seconds 
         # This will convert the NumPy array to an audio 
         # file with the given sampling frequency
@@ -101,6 +102,8 @@ def voicerecord(d):
         return (1)
     except Exception:
         return(0)
+
+#voicerecord("one")
 
 # function to take screenshot
 def screenshot():
@@ -122,8 +125,8 @@ def screenshot():
 
 def sleep(d):
     try:
-        duration = w2n.word_to_num(d)
-        time.sleep(duration*60)
+        #duration = w2n.word_to_num(d)
+        time.sleep(d*60)
         return(1)
     except Exception:
         return(0)
@@ -131,8 +134,8 @@ def sleep(d):
 #for timer
 def countdown(t):
     try:
-        duration = w2n.word_to_num(t)
-        d = duration *60
+        #duration = w2n.word_to_num(t)
+        d = t *60
         while d: 
             mins, secs = divmod(d, 60) 
             timer = '{:02d}:{:02d}'.format(mins, secs) 
